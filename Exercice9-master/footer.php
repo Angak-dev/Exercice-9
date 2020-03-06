@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<a href='<?php get_home_url() ?>'>Exercice 9 </a>
-			<p>&mdash; Crée avec amour par Thiago Ferreira</p>
+			<p>&mdash; Par : Mathieu Bourassa</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

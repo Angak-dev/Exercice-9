@@ -10,7 +10,7 @@ $args = array(
 $queryConferences = new WP_Query( $args );
 
 $args = array(
-    'category_name' => 'Nouvelles',
+    'category_name' => 'Nouvelle',
     'posts_per_page' => 4,
     'orderby' => 'date'
 );
@@ -27,7 +27,7 @@ get_header();
 <figure class="figure-post-thumbnail">
     <?php
         //Appel de la fonction qui affiche l'image de mise en avant
-        tp2_veille_post_thumbnail(); 
+        the_post_thumbnail('full'); 
     ?>
 </figure>
 
