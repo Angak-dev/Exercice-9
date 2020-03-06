@@ -8,7 +8,7 @@
 - En ordre ascendant
  */
 function extraire_evenements( $query ) {
-    if ($query->is_category('evenements'))
+    if ($query->is_category('evenement'))
     {
        $query->set( 'posts_per_page', -1 );
        $query->set( 'orderby', 'date' );
