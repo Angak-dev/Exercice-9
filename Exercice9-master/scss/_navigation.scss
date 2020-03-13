@@ -49,18 +49,15 @@ nav{
 }
 
 
-#masthead{
-
+#masthead {
   width:100%;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-
-
 }
+
 .main-navigation {
   width: 100%;
   display: flex;
@@ -68,11 +65,11 @@ nav{
   flex-direction: row;
 
   #bouton_menu{
-    visibility: hidden;
+    display: none;
   }
 
   #chk_menu{
-    visibility: hidden;
+    display: none;
   } 
 
   #chk_menu:checked~#primary-menu>ul{

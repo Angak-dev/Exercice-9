@@ -180,11 +180,11 @@ Text Domain: exercice-9-child
 }
 
 .main-navigation #bouton_menu {
-  visibility: hidden;
+  display: none;
 }
 
 .main-navigation #chk_menu {
-  visibility: hidden;
+  display: none;
 }
 
 .main-navigation #chk_menu:checked ~ #primary-menu > ul {
