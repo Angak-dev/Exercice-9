@@ -17,6 +17,33 @@ body {
 	}
 }
 
+.section_anim_box {
+  overflow: hidden;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  animation: rotation 2s ease 0s infinite alternate none running;
+}
+
+@keyframes rotation {
+  0% {
+    transform: scale(.3);
+  }
+
+  50% {
+    transform: scale(.6) rotate(-45deg);
+    background: red;
+  }
+
+  100% {
+    transform: scale(0.8) rotate(180deg);
+    background: blue;
+  }
+}
+
 .site-branding {
   display: flex;
   flex-direction: row;

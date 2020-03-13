@@ -322,6 +322,52 @@ body {
   }
 }
 
+.section_anim_box {
+  overflow: hidden;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  -webkit-animation: rotation 2s ease 0s infinite alternate none running;
+          animation: rotation 2s ease 0s infinite alternate none running;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    -webkit-transform: scale(0.6) rotate(-45deg);
+            transform: scale(0.6) rotate(-45deg);
+    background: red;
+  }
+  100% {
+    -webkit-transform: scale(0.8) rotate(180deg);
+            transform: scale(0.8) rotate(180deg);
+    background: blue;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
+  }
+  50% {
+    -webkit-transform: scale(0.6) rotate(-45deg);
+            transform: scale(0.6) rotate(-45deg);
+    background: red;
+  }
+  100% {
+    -webkit-transform: scale(0.8) rotate(180deg);
+            transform: scale(0.8) rotate(180deg);
+    background: blue;
+  }
+}
+
 .site-branding {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -80,6 +80,14 @@ echo '</div>';
 ?>
 
 <?php 
+    echo '
+        <section class="section_anim_box">
+            <div class="box"></div>
+        </section>
+    ';
+?>
+
+<?php 
 //Appel du footer
 get_footer();
 ?>
