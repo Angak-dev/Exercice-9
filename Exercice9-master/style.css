@@ -21,7 +21,7 @@ Text Domain: exercice-9-child
 /** Gutenberg Classes **/
 /** Footer **/
 /*********************************/
-.container-evenements .articles-evenements .content-post, .site-content, .site-content .categorie-nouvelles, .site-content .categorie-nouvelles .categorie-nouvelles-contenu .articles-nouvelles {
+.container-evenements .articles-evenements .content-post, .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +39,7 @@ Text Domain: exercice-9-child
           align-items: center;
 }
 
-.site-header, .site-content .categorie-nouvelles .categorie-nouvelles-contenu, footer {
+.site-header, footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,16 +99,17 @@ Text Domain: exercice-9-child
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    visibility: visible;
+    visibility: hidden;
   }
   #chk_menu:checked ~ #bouton_menu {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
   }
   #chk_menu {
-    display: none;
+    visibility: visible;
   }
   #bouton_menu {
+    visibility: visible;
     color: #fff;
     font-size: 2em;
   }
@@ -135,6 +136,9 @@ Text Domain: exercice-9-child
     list-style-type: none;
     visibility: hidden;
     height: 30px;
+  }
+  nav ul li {
+    color: red;
   }
   nav ul li a {
     text-decoration: none;
@@ -326,6 +330,39 @@ body {
   overflow: hidden;
 }
 
+.section_evenement {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .section_evenement {
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .box {
   width: 100px;
   height: 100px;
@@ -406,19 +443,26 @@ body {
 }
 
 .site-content .categorie-nouvelles {
+  /*@extend %displayFlexColumnCenter;*/
   width: 100%;
   height: auto;
   margin: 2% 0;
 }
 
 .site-content .categorie-nouvelles .categorie-nouvelles-contenu {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .site-content .categorie-nouvelles .categorie-nouvelles-contenu .articles-nouvelles {
@@ -477,6 +521,12 @@ footer .site-info a {
 
 footer .site-info a:hover {
   color: #0978C0;
+}
+
+.block_guttenberg {
+  width: 35%;
+  border-radius: 15%;
+  background-color: lightblue;
 }
 
 /*********************************/

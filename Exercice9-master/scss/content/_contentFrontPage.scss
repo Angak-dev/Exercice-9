@@ -21,6 +21,25 @@ body {
   overflow: hidden;
 }
 
+.section_evenement {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .section_evenement {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+}
+
 .box {
   width: 100px;
   height: 100px;
@@ -78,22 +97,18 @@ body {
   }
 
   .categorie-nouvelles {
-    @extend %displayFlexColumnCenter;
+    /*@extend %displayFlexColumnCenter;*/
     width: 100%;
     height: auto;
 
     margin: 2% 0;
     .categorie-nouvelles-contenu {
-      @extend %displayFlexRowCenter;
-      align-items: flex-end;
-      flex-wrap: wrap;
-
-      width: 100%;
-      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
 
       .articles-nouvelles {
-        @extend %displayFlexColumnCenter;
-
         margin: 1%;
         width: 20vw;
 

@@ -45,7 +45,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<input type="checkbox" id="chk_menu">
+			<input type="checkbox" id="chk_menu"> 	 	
 			<label id="bouton_menu" for="chk_menu">&#9776;</label>
 			<?php
 			wp_nav_menu( array(

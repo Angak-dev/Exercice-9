@@ -34,7 +34,10 @@ get_header();
 
 <?php
 // Appel du Query : Evenement
-echo '<h1>Nos derniers évènements</h1>';
+echo '
+    <h1>Nos derniers évènements</h1>
+    <div class="section_evenement">
+    ';   
 
 while ( $queryEvenement->have_posts() ) {
     $queryEvenement->the_post();
@@ -49,6 +52,7 @@ while ( $queryEvenement->have_posts() ) {
 
 wp_reset_postdata();
 
+echo '</div>';
 echo '</div>';
 echo '</div>';
 ?>
