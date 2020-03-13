@@ -37,7 +37,7 @@ nav{
             display: block;
             padding: 3px;   
             &:hover{
-                background-color:lighten($couleur_rouge, 20%);
+                background-color:lighten(red, 20%);
             }
         }
     }
