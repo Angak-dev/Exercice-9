@@ -2,30 +2,31 @@
   @extend %displayFlexRowCenter;
   justify-content: space-between;
 
-  height: 8vh;
+  height: 100%;
 
   margin: 0 2%;
 }
 
 .site-branding {
-  @extend %displayFlexRowCenter;
+  display: flex;
   justify-content: flex-start;
   width: 50%;
 
   .custom-logo-link {
     img {
-      max-width: 40px;
+      max-width: 100px;
       max-height: 40px;
     }
   }
   .site-title {
-    margin-left: 5%;
+    margin: 0;
     a {
       text-decoration: none;
       text-transform: uppercase;
       color: $blue;
 
-      font-size: 1.5em;
+      font-size: 3em;
+      font-weight:bold;
     }
   }
 }

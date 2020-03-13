@@ -1,3 +1,14 @@
+.site-branding {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-description {
+  margin: 0;
+}
+
 .site-content {
   @extend %displayFlexColumnCenter;
 
@@ -16,51 +27,6 @@
       img {
         width: 100%;
         height: 100%;
-      }
-    }
-  }
-
-  .categorie-conferences {
-    @extend %displayFlexColumnCenter;
-    align-items: flex-start;
-    width: 60%;
-
-    margin: 2% 0;
-
-    .articles-conferences {
-      @extend %displayFlexRowCenter;
-
-      margin: 1% 0;
-
-      .image-article {
-        width: 200px;
-      }
-
-      .content-post {
-        margin-left: 2%;
-
-        .title-article {
-          margin: 0.5% 0;
-          a {
-            color: $blue;
-            text-transform: uppercase;
-
-            @include transition(color 0.4s);
-
-            &:hover {
-              color: lighten($blue, 20%);
-            }
-          }
-        }
-
-        .post-date {
-          margin: 0;
-        }
-
-        .text-extract {
-          text-align: justify;
-          text-align-last: left;
-        }
       }
     }
   }

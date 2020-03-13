@@ -15,8 +15,8 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href='<?php get_home_url() ?>'>Exercice 9 </a>
-			<p>&mdash; Par : Mathieu Bourassa</p>
+			<p>TP2</p>
+			<p>&mdash; Par : Mathieu Bourassa & Luka Ross</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

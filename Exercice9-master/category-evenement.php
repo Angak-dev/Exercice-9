@@ -1,4 +1,4 @@
-<?php 
+<?php /*Template Name: content-evenement*/ 
     get_header();
 
     echo "<h1> Nos événements importants cette année </h1>";
@@ -11,7 +11,12 @@
                 $jourGrid = get_the_date('j') + 1;
                 $moisGrid = convertMoisEnColone($mois);
 
+                if(($mois==1)||($mois==2)||($mois==12)){
+
+            
                 $gridArea = ''.$jour.'/'.$moisGrid.'/'.$jourGrid.'/'.$moisGrid.'';
+
+
 
                 echo '
                 <article class="articles-evenements" style="
@@ -24,6 +29,7 @@
                     </div>
                 </article>
                 ';
+                }
             endwhile;
         echo '</div>';
     endif;

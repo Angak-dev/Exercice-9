@@ -3,9 +3,9 @@
 Theme Name: Exerice 9 - Child
 Theme URI: 127.0.0.1/tp2-veille
 Description: Child theme of Exercice 9 - Programmation et Veille Technologique
-Author: Mathieu Bourassa
-Author URI: 
-Template: Astral
+Author: Thiago Ferreira
+Author URI: thiagoferreira.ca
+Template: tp2-veille
 Version: 1.0
 Text Domain: exercice-9-child
 */
@@ -21,7 +21,7 @@ Text Domain: exercice-9-child
 /** Gutenberg Classes **/
 /** Footer **/
 /*********************************/
-.container-evenements .articles-evenements .content-post, .site-content, .site-content .categorie-conferences, .site-content .categorie-nouvelles, .site-content .categorie-nouvelles .categorie-nouvelles-contenu .articles-nouvelles {
+.container-evenements .articles-evenements .content-post, .site-content, .site-content .categorie-nouvelles, .site-content .categorie-nouvelles .categorie-nouvelles-contenu .articles-nouvelles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +39,7 @@ Text Domain: exercice-9-child
           align-items: center;
 }
 
-.site-header, .site-branding, .main-navigation .menu, .site-content .categorie-conferences .articles-conferences, .site-content .categorie-nouvelles .categorie-nouvelles-contenu, footer {
+.site-header, .site-content .categorie-nouvelles .categorie-nouvelles-contenu, footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,11 +61,14 @@ Text Domain: exercice-9-child
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 8vh;
+  height: 100%;
   margin: 0 2%;
 }
 
 .site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -73,40 +76,81 @@ Text Domain: exercice-9-child
 }
 
 .site-branding .custom-logo-link img {
-  max-width: 40px;
+  max-width: 100px;
   max-height: 40px;
 }
 
 .site-branding .site-title {
-  margin-left: 5%;
+  margin: 0;
 }
 
 .site-branding .site-title a {
   text-decoration: none;
   text-transform: uppercase;
   color: #0978C0;
-  font-size: 1.5em;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+}
+
+#masthead {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .main-navigation {
-  width: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.main-navigation .menu {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+.main-navigation #primary-menu {
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*border: solid black 2px;*/
+  /*font-size: 15%;*/
   margin: 0;
   padding: 0;
 }
 
-.main-navigation .menu li {
+.main-navigation #primary-menu li {
   margin: 0 5%;
   list-style: none;
+  display: inline;
 }
 
-.main-navigation .menu li a {
+.main-navigation #primary-menu li a {
   color: #111;
   text-decoration: none;
   text-transform: uppercase;
@@ -114,7 +158,7 @@ Text Domain: exercice-9-child
   transition: color 0.4s;
 }
 
-.main-navigation .menu li a:hover {
+.main-navigation #primary-menu li a:hover {
   color: #0978C0;
 }
 
@@ -133,10 +177,8 @@ body {
 .container-evenements {
   width: 90vw;
   border: 2px solid #111;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (30vw)[3];
-      grid-template-columns: repeat(3, 30vw);
+  /*display: grid;
+  grid-template-columns: repeat(3, 30vw);*/
   margin: 2%;
 }
 
@@ -168,6 +210,26 @@ body {
   margin-top: 0;
 }
 
+.site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site-description {
+  margin: 0;
+}
+
 .site-content .figure-post-thumbnail {
   width: 100vw;
   height: 50vh;
@@ -183,50 +245,6 @@ body {
 .site-content .figure-post-thumbnail .post-thumbnail img {
   width: 100%;
   height: 100%;
-}
-
-.site-content .categorie-conferences {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 60%;
-  margin: 2% 0;
-}
-
-.site-content .categorie-conferences .articles-conferences {
-  margin: 1% 0;
-}
-
-.site-content .categorie-conferences .articles-conferences .image-article {
-  width: 200px;
-}
-
-.site-content .categorie-conferences .articles-conferences .content-post {
-  margin-left: 2%;
-}
-
-.site-content .categorie-conferences .articles-conferences .content-post .title-article {
-  margin: 0.5% 0;
-}
-
-.site-content .categorie-conferences .articles-conferences .content-post .title-article a {
-  color: #0978C0;
-  text-transform: uppercase;
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
-}
-
-.site-content .categorie-conferences .articles-conferences .content-post .title-article a:hover {
-  color: #39acf6;
-}
-
-.site-content .categorie-conferences .articles-conferences .content-post .post-date {
-  margin: 0;
-}
-
-.site-content .categorie-conferences .articles-conferences .content-post .text-extract {
-  text-align: justify;
-  text-align-last: left;
 }
 
 .site-content .categorie-nouvelles {

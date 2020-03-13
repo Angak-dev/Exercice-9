@@ -1,17 +1,106 @@
-.main-navigation {
-  width: 50%;
-  height: auto;
+@media screen and (max-width: 600px) {
+  
+  #chk_menu:checked~ #primary-menu>ul{
+    height:150px ;
+    flex-direction: column;
+    visibility: visible;
+}
+#chk_menu:checked~#bouton_menu{
+    transform: rotate(90deg);
+}
+#chk_menu{
+    display :none;
+}
+#bouton_menu{
+    color: #fff;
+    font-size:2em;
+}
+#bouton_menu{
+    transform-origin: 35% 35%;
+    width: 50px;
+    height: 50px;
+}
 
-  .menu {
-    @extend %displayFlexRowCenter;
-    justify-content: flex-end;
+nav{
+    display: flex;
+    position: absolute;
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        visibility: hidden;
+        height: 30px;
+    li{
+            
+        a{
+            text-decoration: none;
+            display: block;
+            padding: 3px;   
+            &:hover{
+                background-color:lighten($couleur_rouge, 20%);
+            }
+        }
+    }
+    }
+}
+}
+
+
+#masthead{
+
+  width:100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+
+
+}
+.main-navigation {
+  width: 100%;
+  display: flex;
+  height: auto;
+  flex-direction: row;
+
+  #bouton_menu{
+    visibility: hidden;
+  
+
+}
+#chk_menu{
+    visibility: hidden;
+}
+#chk_menu:checked~#primary-menu>ul{
+    height:30px ;
+    flex-direction: row;
+    visibility: visible;
+}
+
+  #primary-menu {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*border: solid black 2px;*/
+    /*font-size: 15%;*/
 
     margin: 0;
     padding: 0;
-
+    ul{
+      flex-direction: row;
+      justify-content: space-between;
+      visibility: visible;
+      height:30 ;
+      
+    
+  
     li {
       margin: 0 5%;
       list-style: none;
+      display: inline;
+      flex: 1;
 
       a {
         color: $black;
@@ -25,5 +114,7 @@
         }
       }
     }
+    }
   }
+
 }
